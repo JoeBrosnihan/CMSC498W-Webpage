@@ -93,9 +93,28 @@
     </div>
     <div class="col-sm-3"> 
       <p><b>Galen Stetsyuk</b></p> 
+      <p>Models were made to account for collision placement system. Models will "snap" based on origin location.</p>
+      <img src = "images/UI01.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>UI with tiles implemented for switching objects to place on the vehicle.</p>
+      <img src = "images/UI02.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Some Model with thrusters and particle systems.</p>
+      <img src = "images/Thruster01.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/Thruster02.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>The UI needs to be improved in terms of functionality, and physics characteristics need to be implemented to more accurately reflect object states when placed on vehicle.</p>
     </div>
     <div class="col-sm-3">
       <p><b>Mikhail Sorokin</b></p>
+      <p>Using the integrated networking system in Unity, which is called UNet, I was able to use an in-built GUI in order to make it
+              create a sample environment for two players to be placed in.</p>
+      <img src = "images/Mike-GUI.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Created a placeholder avatar which will be useful in order to see position and rotation reflected across the network. (Seen below).</p>
+      <img src = "images/Mike-Avatar.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Both players can see each other, with one player being a different color from the other in order to distinguish the two. Their rotations with
+        the headset are matched and they can see each other in the same world. (Seen below).</p>
+      <img src = "images/Mike-Interaction.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/Mike-Player Two Look Down.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>In conclusion, some issues I have been having with the multiplayer in VR is that it looks a bit choppy and more optimization is needed.
+              Fixing this problem will be my goal to achieve as I am progressing towards the second checkpoint.</p>
     </div>
   </div>
 </div>
@@ -116,15 +135,37 @@
   <div class="row">
     <div class="col-sm-3">
       <p><b>Joe Brosnihan</b></p>
+      <p>The user can now attach any arbitrary piece selected from the catalogue of pieces displayed in Galen's UI.</p>
+      <p>We did not add Axles because we decided last checkpoint to use Wheel Colliders instead.</p>
+      <img src = "images/select.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/attach.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
       <p><b>Chris Castellano</b></p>
+      <p>Map has been developed with much more detail. Road system is completely finished. Added areas such as a forest and baseball field.</p>
+      <img src = "images/MapPhase2.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
       <p><b>Galen Stetsyuk</b></p> 
+      <p>UI tiles have much better scrolling functionailty, and return the current object to be placed.</p>
+      <img src = "images/UI03.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Other models of pipes</p>
+      <img src = "images/Pipe01.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/Pipe02.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
       <p><b>Mikhail Sorokin</b></p>
+      <p>I added building functionality for the two players. If one player places an 
+                object in one world, then the other player will be able to see it spawn in 
+                their client view. In the picture, there was just a test with multiple wheels
+                to see if this information could be sent both ways.</p>
+      <img src = "images/Two Player Building Interactivity.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>A lot of wheels in front of the player's face.</p>
+      <img src = "images/Smother_Wheels.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>I fixed the choppiness, which was evident from last time. The movement isn't flawless, which is expected,
+              but it is good enough for a demo, especially for a VR one.</p>
+      <p>For the last checkpoint, I plan on fixing some issues that may occur with building over the network and 
+              making sure that driving is simulated over the network as well.</p>
     </div>
   </div>
 </div>
@@ -141,19 +182,39 @@
         <div class="panel-body">
 
 <div class="container-fluid bg-3 text-center">    
-  <h3>Checkpoint 3</h3><br>
+  <h3>Final Checkpoint</h3><br>
   <div class="row">
     <div class="col-sm-3">
       <p><b>Joe Brosnihan</b></p>
+      <p>(Needs to update this).</p>
+      <img src = "images/select.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/attach.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
       <p><b>Chris Castellano</b></p>
+      <p>Map has been fully developed. Roads are complete and connected. All assets and buildings are placed and colliders have been attached. I decided to put more work into the actual map development rather than add a small procedural asset script. </p>
+      <img src = "images/ChrisPic1.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Deleted various components off the buildings in order to decrease triangles and increase performance.</p>
+      <img src = "images/ChrisPic2.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Added a procedural skybox.</p>
+      <img src = "images/ChrisPic3.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
       <p><b>Galen Stetsyuk</b></p> 
+      <p>Added all the models you will see on the UI in game. Better UI functionality with the d-pad on the xbox controller.</p>      
+      <img src = "images/chair.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/spoiler.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/thrust.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/thrust2.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/thrust3.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/thrust4.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3">
       <p><b>Mikhail Sorokin</b></p>
+      <p>(Needs to update this).</p>
+      <img src = "images/Add Multiple Objects.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/Adding Wheels - Multiplayer.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src = "images/View In Scene.png" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
 </div>
