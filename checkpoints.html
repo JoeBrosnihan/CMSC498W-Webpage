@@ -1,258 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+    background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
 
-<html>
-	<head>
-		<title>Class Assignment - 498W CS</title>
-	</head>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Junkyard Wars VR</h1>      
+    <p>What will you build?</p>
+  </div>
+</div>
 
-	<body style = "background-color:#00cc66;">
-		<h1>Welcome to our page! (We plan on making this prettier later :) )</h1>
-		<p>This page will contain information about our VR class project, which is called <u>Junkyard Wars</u>.</p>
-		</br>
-		
-		<p><u>Junkyard Wars</u> is a Sandbox Multiplayer Vehicle Building Simulator - going to be made with the Unity 5 game engine.
-The players build a vehicle in VR that they can then drive around a map. This sandbox simulation has two modes: building and testing. Players will be able to see avatars of each other that will match head movement.
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="checkpoints.html">Project Checkpoints</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<br>
 
-In building mode, the players can build any kind of vehicle they want out of modular pieces including wheels, frames, thrusters, and seats. In this mode, both players will be at a workstation where they are given a vehicle base. They may then add pieces onto the vehicle base and onto other pieces already attached to the vehicle.
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">April 4, 2016</div>
+        <div class="panel-body">
 
-The players can then enter testing mode to pilot their vehicle. Player 1 is placed in the driver seat (if there is one) and player 2 is placed in the passenger seat. Otherwise, players will stand nearby and watch the vehicle. Certain modular pieces of the vehicle such as wheels and thrusters can be controlled by joysticks and buttons on the XBox controllers.</p>
-		
-		<table border = "2" style = "width:100%">
-			<!-- Project 1 Checkpoint information!-->
-			<tr><h1><i>Project 1 Checkpoint - 4/7/2016</i></h1></tr>
-							
-				<tr>
-					<td>
-						<h2><strong>Mikhail Sorokin</strong></h2>
-						
-						<p>
-							<b  style = "color:white">
-							Using the integrated networking system in Unity, which is called UNet, I was able to use an in-built GUI in order to make it
-							create a sample environment for two players to be placed in.
-							</b>
-							</br>
-						</br><img src = "images/Mike-GUI.png"></p>
-						
-						<p>
-							<b  style = "color:white">
-							Created a placeholder avatar which will be useful in order to see position and rotation reflected across the network. (Seen below).
-							</b>
-							</br>
-						</br><img src = "images/Mike-Avatar.png"></p>
-						
-						<p>
-						</br><b  style = "color:white">
-							Both players can see each other, with one player being a different color from the other in order to distinguish the two. Their rotations with
-							the headset are matched and they can see each other in the same world. (Seen below).
-						</b>
-						</p>
-						</br><img src = "images/Mike-Interaction.png">
-						</br><img src = "images/Mike-Player Two Look Down.png">
-						
-						<p>
-						</br><b  style = "color:white">
-							In conclusion, some issues I have been having with the multiplayer in VR is that it looks a bit choppy and more optimization is needed.
-							Fixing this problem will be my goal to achieve as I am progressing towards the second checkpoint.
-						</b>
-						</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h2><strong>Joe Brosnihan</strong></h2>
+<div class="container-fluid bg-3 text-center">    
+  <h3>Checkpoint 1</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p><b>Joe Brosnihan</b></p>
+      <p>My goal throughout this checkpoint was to allow the player to attach wheels to a chasis.
+      Here is the player placing the first wheel onto the chasis. It is placed according to a raycast from the camera.</p>
+      <img src="images/placement1.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>The player can attach an arbitrary number of pieces to any side of a surface.<p>
+      <img src = "images/placement2.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>The player can then drive the vehicle they have built by pressing Start.</p>
+      <img src = "images/driving.png" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p><b>Chris Castellano</b></p>
+      <p>My goal throughout this checkpoint was to create a sandbox, which would be the environment for the players to interact in.
+              My first plan of action was to create a city, which would be the area in which the players start off in.</p>
+      <img src = "images/cityCHRIS.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>They would be able to interact with the props, which will be objects the two players will use to build a vehicle of their choice.</p>
+      <img src = "images/citywithpropsCHRIS.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>There is also another biome - the desert, which the players can access from the city.</p>
+      <img src = "images/desertCHRIS.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>There is also some water in the desert in order to make the place more lively.</p>
+      <img src = "images/beachCHRIS.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>My next plan of action is to integrate procedural generation with the assets and fix bounds on the map so that players can't drive off the world. Also,
+              I will add different types of assets to make the scene more complete.</p>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
 
-						<p>
-						</br><b  style = "color:white">
-							My goal throughout this checkpoint was to allow the player to attach wheels to a chasis.
-						</b></p>
-						<p>
-						</br><b  style = "color:white">
-							Here is the player placing the first wheel onto the chasis. It is placed according to a raycast from the camera.
-						</b></p>
-						</br><img src = "images/placement1.png">
-						</br><p><b  style = "color:white">
-							The player can attach an arbitrary number of pieces to any side of a surface.
-						</b></p>						
-						</br><img src = "images/placement2.png">
-						</br><p><b  style = "color:white">
-							The player can then drive the vehicle they have built by pressing Start.
-						</b></p>	
-						</br><img src = "images/driving.png">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h2><strong>Galen Stetsyuk</strong></h2>
-						<p>
-							<b  style = "color:white">
-							Models were made to account for collision placement system. Models will "snap" based on origin location.
-							</b>
-							</br>
-						</br><img src = "images/UI01.png"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
 
-						<p>
-						<b  style = "color:white">
-							UI with tiles implemented for switching objects to place on the vehicle.
-							</b>
-							</br>
-						</br><img src = "images/UI02.png"></p>
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>  
+</footer>
 
-						<p>
-						<b  style = "color:white">
-							Some Model with thrusters and particle systems.
-							</b>
-							</br>
-						</br><img src = "images/Thruster01.png">
-						</br><img src = "images/Thruster02.png"></p>
-						
-						<p>
-						</br><b  style = "color:white">
-							The UI needs to be improved in terms of functionality, and physics characteristics need to be implemented to more accurately reflect object states when placed on vehicle.
-						</b>
-						</p>
-						
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h2><strong>Chris Castellano</strong></h2>
-
-						<p>
-						</br><b  style = "color:white">
-							My goal throughout this checkpoint was to create a sandbox, which would be the environment for the players to interact in.
-						</b></p>
-						<p>
-						</br><b  style = "color:white">
-							My first plan of action was to create a city, which would be the area in which the players start off in.
-						</b></p>
-						</br><img src = "images/cityCHRIS.png">
-						</br><p><b  style = "color:white">
-							They would be able to interact with the props, which will be objects the two players will use to build a vehicle of their choice.
-						</b></p>						
-						</br><img src = "images/citywithpropsCHRIS.png">
-						</br><p><b  style = "color:white">
-							There is also another biome - the desert, which the players can access from the city.
-						</b></p>	
-						</br><img src = "images/desertCHRIS.png">
-						</br><p><b  style = "color:white">
-							There is also some water in the desert in order to make the place more livelier.
-						</b></p>	
-						</br><img src = "images/beachCHRIS.png">	
-						</br><p><b  style = "color:white">
-							My next plan of action is to integrate procedural generation with the assets and fix bounds on the map so that players can't drive off the world. Also,
-							I will add different types of assets to make the scene more complete.
-						</b></p>
-
-					</td>
-				</tr>
-		</table>
-		
-		<table border = "1" style = "width:100%">
-			<!-- Project 2 Checkpoint information!-->
-			<tr>
-				<h1><i>Project 2 Checkpoint - TBA</i></h1>
-						
-				<tr>
-					<td>
-						<h2><strong>Mikhail Sorokin</strong></h2>
-						
-						<p>
-						</br>
-							<b  style = "color:white">
-								I added building functionality for the two players. If one player places an 
-								object in one world, then the other player will be able to see it spawn in 
-								their client view. In the picture, there was just a test with multiple wheels
-								to see if this information could be sent both ways. 
-							</b>
-						</p>
-						</br><img src = "images/Two Player Building Interactivity.png">
-						<p>
-						</br>
-							<b  style = "color:white">
-								A lot of wheels in front of the player's face.
-							</b>
-						</p>
-						</br><img src = "images/Smother_Wheels.png">
-						
-						<p>
-						</br><b  style = "color:white">
-							I fixed the choppiness, which was evident from last time. The movement isn't flawless, which is expected,
-							but it is good enough for a demo, especially for a VR one.
-						</b>
-						</p>
-						
-						<p>
-						</br><b  style = "color:white">
-							For the last checkpoint, I plan on fixing some issues that may occur with building over the network and 
-							making sure that driving is simulated over the network as well.
-						</b>
-						</p>
-					</td>
-				</tr>
-				
-
-				<tr>
-					<td>
-						<h2><strong>Joe Brosnihan</strong></h2>
-						<b  style = "color:white">
-							The user can now attach any arbitrary piece selected from the catalogue of pieces displayed in Galen's UI.
-							</br>
-							We did not add Axles because we decided last checkpoint to use Wheel Colliders instead.
-							</b>
-							</br>
-						</br><img src = "images/select.png"></p>
-						</br><img src = "images/attach.png"></p>
-						
-					</td>
-				</tr>
-				
-				<tr>
-					<td>
-						<h2><strong>Galen Steystuk</strong></h2>
-						
-						<b  style = "color:white">
-							UI tiles have mutch better scrolling functionailty, and return the current object to be placed.
-							</b>
-							</br>
-						</br><img src = "images/UI03.png"></p>
-
-						<b  style = "color:white">
-							Other models of pipes
-							</b>
-							</br>
-						</br><img src = "images/Pipe01.png"></p>
-						</br><img src = "images/Pipe02.png"></p>
-					</td>
-				</tr>
-				
-				<tr>
-					<td>
-						<h2><strong>Chris Castellano</strong></h2>
-				
-						<b  style = "color:white">
-							Map has been developed with much more detail. Road system is completely finished. Added areas such as a forrest and baseball field.
-							</b>
-							</br>
-						</br><img src = "images/MapPhase2.png"></p>
-						
-					</td>
-				</tr>
-				
-			</tr>
-		</table>
-			
-		<table border = "1" style = "width:100%">
-			<!-- Project 3 Checkpoint information!-->
-			<tr>
-				<h1><i>Project 3 Checkpoint - TBA</i></h1>
-							
-				<tr><td><h2><strong>Mikhail Sorokin</strong></h2></td></tr>
-				<tr><td><h2><strong>Joe Brosnihan</strong></h2></td></tr>
-				<tr><td><h2><strong>Galen Steystuk</strong></h2></td></tr>
-				<tr><td><h2><strong>Chris Castellano</strong></h2></td></tr>
-			</tr>
-		</table>
-
-		<p><h6>Created by Mikhail Sorokin, Joe Brosnihan, Chris Castellano and Galen Steystuk.</h6></p>
-		
-	</body>
+</body>
 </html>
